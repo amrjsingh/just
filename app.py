@@ -150,7 +150,7 @@ async def handle(msg):
 
 # Program startup
 TOKEN = str(os.environ.get('BOT_T'))
-bot = telepot.aio.Bot(TOKEN)
+bot = telepot.aio.Bot(TOKEN,{polling: true})
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot, handle).run_forever())
 
