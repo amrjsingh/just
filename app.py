@@ -94,7 +94,7 @@ async def handle(msg):
     csvwriter = csv.DictWriter(out_file, delimiter=',', fieldnames=fields)
 
     # Write fields first
-    # csvwriter.writerow(dict((fn,fn) for fn in fields))
+    csvwriter.writerow(dict((fn,fn) for fn in fields))
     while True:
         # Check if reached end of result
         if page_number > nupage:
@@ -148,7 +148,7 @@ async def handle(msg):
 
 
 # Program startup
-TOKEN = '1637411751:AAEvrfJMGXruwu1AQVePqBS_8HZs57Cw-Qs'
+TOKEN = '1637411751:AAEKxRCj0P16KoREselt4yJdtKHUZBIAdDQ'
 bot = telepot.aio.Bot(TOKEN)
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot, handle).run_forever())
