@@ -148,7 +148,7 @@ async def handle(msg):
 
 
 # Program startup
-TOKEN = '1637411751:AAF8euejTTOPzM4rwsE-wySNzf5soSBG-gw'
+TOKEN = '1637411751:AAEvrfJMGXruwu1AQVePqBS_8HZs57Cw-Qs'
 bot = telepot.aio.Bot(TOKEN)
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot, handle).run_forever())
