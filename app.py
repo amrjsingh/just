@@ -103,8 +103,8 @@ async def handle(msg):
         url = "https://www.justdial.com/" + forlink + "/page-%s" % (page_number)
         print(url)
         req = urllib.request.Request(url, headers={'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64)"})
-        #page = urllib.request.urlopen(req)
-        page=urllib2.urlopen(url)
+        page = urllib.request.urlopen(req)
+        #page=urllib2.urlopen(url)
 
         soup = BeautifulSoup(page.read(), "html.parser")
         services = soup.find_all('li', {'class': 'cntanr'})
