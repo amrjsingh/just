@@ -1,4 +1,4 @@
-from _multiprocessing import send
+#errf
 from bs4 import BeautifulSoup
 import asyncio
 import telepot
