@@ -146,10 +146,10 @@ async def handle(msg):
     await bot.sendDocument(chat_id=chat_id, document=open(filesend, 'rb'))
 
 
-times = str(os.environ.get('TIMES'))
+
 
 # Program startup
-TOKEN = times
+TOKEN = str(os.environ.get('BOT_T'))
 bot = telepot.aio.Bot(TOKEN)
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot, handle).run_forever())
