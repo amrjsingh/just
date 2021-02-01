@@ -1,0 +1,7 @@
+bs4
+telepot
+requests
+python-dotenv>=0.10
+asyncio==3.4.3
+aiohttp==3.6.2
+aiofiles==0.5.0
