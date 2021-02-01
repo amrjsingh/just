@@ -1,4 +1,4 @@
-#errf
+import os
 from bs4 import BeautifulSoup
 import asyncio
 import telepot
@@ -146,9 +146,10 @@ async def handle(msg):
     await bot.sendDocument(chat_id=chat_id, document=open(filesend, 'rb'))
 
 
+times = str(os.environ.get('TIMES'))
 
 # Program startup
-TOKEN = '1637411751:AAEKxRCj0P16KoREselt4yJdtKHUZBIAdDQ'
+TOKEN = times
 bot = telepot.aio.Bot(TOKEN)
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot, handle).run_forever())
